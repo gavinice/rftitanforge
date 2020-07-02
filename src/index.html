@@ -1,12 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
-</head>
-<body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>webpack starterkit</title>
+    <script
+      src="https://kit.fontawesome.com/1fefcfb8cf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="main">
+      <nav>
+        <div class="container">
+          <ul class="mobile-nav show-mobile hide-desktop m-0 m-py-1 m-px-0">
+            <li class="logo"><img src="/public/rf-logo.png" alt="" /></li>
+            <li class="hamburger"><i class="fas fa-bars"></i></li>
+          </ul>
+          <ul class="desktop-nav show-desktop hide-mobile m-0 m-py-1 m-px-0">
+            <li class="logo"><img src="/public/rf-logo.png" alt="" /></li>
+            <li class="nav-list">
+              <div class="list"><a href="index.html">Home</a></div>
+              <div class="list"><a href="news.html">News</a></div>
+              <div class="list"><a href="shop.html">Shop</a></div>
+
+              <div class="list"><a href="download.html">Download</a></div>
+              <div class="list"><a href="#">Forum</a></div>
+              <div class="list"><a href="#">Support</a></div>
+              <div class="list"><a href="donation.html">Donate</a></div>
+            </li>
+            <li class="login">
+              <div class="sign d-mr-1">
+                <a href="#">Login</a>
+                <div class="line">|</div>
+                <a href="#">Sign Up</a>
+              </div>
+              <a href="#">
+                <button class="btn primary-btn">Play Now</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="home">
+        <div class="main">
+          <div class="video-container">
+            <video src="/public/rf2.mov" autoplay muted></video>
+          </div>
+          <div class="content">
+            <div class="content-container container">
+              <div class="logo"><img src="/public/rf-logo.png" alt="" /></div>
+              <h1 class="m-my-1">Only the weak surrender</h1>
+              <div class="box-container m-py-half m-px-1 m-mb-1">
+                LEVEL CAP : 70 | 8X EXP | 4X PT | 9X ANIMUS DROP | 1X DROP
+              </div>
+              <div class="buttons">
+                <a href="#">
+                  <button class="btn primary-btn">Download Now</button>
+                </a>
+                <a href="#">
+                  <button class="btn secondary-btn">Learn More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news-shop">
+        <div class="news-shop-container container d-my-5">
+          <div class="latest-news m-py-2 d-py-0 d-pr-2">
+            <div class="title-viewmore m-mb-1 d-mb-2">
+              <h1 class="m-0">Latest News</h1>
+              <a href="news.html" class="view">
+                <div>View More</div>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="box-container">
+              <div class="first row m-mb-1">
+                <div class="news-card m-p-2 d-p-2">
+                  <div class="news-info">
+                    <div class="title m-mb-1">
+                      Chip Breaker Challenge: Amazing April!
+                    </div>
+                    <div class="desc hide-mobile show-desktop d-mb-1">
+                      The extended community quarantine is not stopping us from
+                      giving away more prizes this April! Another round of The
+                      RF Online Chipbreaker Challenge is happening this month
+                      for the Citizens of Novus and Desolation.
+                    </div>
+                    <a href="news-page.html">
+                      <button class="btn secondary-btn">
+                        Read More
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="second row">
+                <div class="news-card m-mb-1 m-p-2 d-p-2 d-m-0">
+                  <div class="news-info">
+                    <div class="title m-mb-1">
+                      Chip Breaker Challenge: Amazing April!
+                    </div>
+
+                    <a href="news-page.html">
+                      <button class="btn secondary-btn">
+                        Read More
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="news-card m-p-2 d-p-2">
+                  <div class="news-info">
+                    <div class="title m-mb-1">
+                      Chip Breaker Challenge: Amazing April!
+                    </div>
+
+                    <a href="news-page.html">
+                      <button class="btn secondary-btn">
+                        Read More
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cash-shop m-mb-2 d-pl-2">
+            <div class="title-viewmore m-mb-1 d-mb-2">
+              <h1 class="m-0">Cash Shop</h1>
+              <a href="shop.html" class="view">
+                <div>View More</div>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="shop-item-container">
+              <div class="shop-item">
+                <div class="item-img m-mr-half"></div>
+                <div class="item-desc">
+                  <div class="tag">Limited</div>
+                  <div class="title">Hora DarkHall’s Treasure</div>
+                  <div class="price">90,000 CASH</div>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="item-img m-mr-half"></div>
+                <div class="item-desc">
+                  <div class="tag">Limited</div>
+                  <div class="title">Hora DarkHall’s Treasure</div>
+                  <div class="price">90,000 CASH</div>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="item-img m-mr-half"></div>
+                <div class="item-desc">
+                  <div class="tag">Limited</div>
+                  <div class="title">Hora DarkHall’s Treasure</div>
+                  <div class="price">90,000 CASH</div>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="item-img m-mr-half"></div>
+                <div class="item-desc">
+                  <div class="tag">Limited</div>
+                  <div class="title">Hora DarkHall’s Treasure</div>
+                  <div class="price">90,000 CASH</div>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="item-img m-mr-half"></div>
+                <div class="item-desc">
+                  <div class="tag">Limited</div>
+                  <div class="title">Hora DarkHall’s Treasure</div>
+                  <div class="price">90,000 CASH</div>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="item-img m-mr-half"></div>
+                <div class="item-desc">
+                  <div class="tag">Limited</div>
+                  <div class="title">Hora DarkHall’s Treasure</div>
+                  <div class="price">90,000 CASH</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container m-py-2">
+          <div>© 2020 RF Titanforge Inc. All rights reserved.</div>
+        </div>
+      </footer>
+    </div>
+    <div class="menu">
+      <div class="top">
+        <i class="fas fa-times close"></i>
+      </div>
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="news.html">
+            <span class="text">News</span>
+          </a>
+        </li>
+        <li>
+          <a href="shop.html">
+            <span class="text">Shop</span>
+          </a>
+        </li>
+        <li>
+          <a href="download.html">
+            <span class="text">Download</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="text">Forum</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="text">Support</span>
+          </a>
+          <a href="donation.html">
+            <span class="text">Donate</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

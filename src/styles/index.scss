@@ -1,6 +1,429 @@
-$body-color: slateblue;
+@import "reset.scss";
+@import "m-p.scss";
+@import "global.scss";
+@import "news.scss";
+@import "download.scss";
+@import "donation.scss";
+@import "news-page.scss";
+@import "shop.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100&family=Roboto:wght@400;500&display=swap");
 
 body {
-  color: $body-color;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
+  background: #dfdbd2;
+  .menu {
+    position: fixed;
+    background-color: #171717;
+    z-index: 100;
+    right: 0;
+    height: 100%;
+    width: 80%;
+    max-width: 330px;
+
+    transform: translate(100%);
+    transition: all 0.5s ease;
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .close {
+        color: white;
+        padding-left: 20px;
+        padding-top: 2rem;
+        cursor: pointer;
+      }
+    }
+    ul {
+      padding: 0;
+      margin-left: 1.5rem;
+      margin-top: 4rem;
+      li {
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          color: white;
+
+          text-transform: uppercase;
+
+          font-size: 24px;
+          padding: 1rem 0;
+          display: block;
+          font-family: "bebas neue", cursive;
+          i {
+            font-size: 24px;
+            margin-right: 1rem;
+          }
+        }
+      }
+      a {
+        display: inline-block;
+      }
+
+      button {
+        margin-top: 2rem;
+        cursor: pointer;
+
+        color: white;
+      }
+    }
+  }
+}
+
+body.is-menu-open {
+  .menu {
+    transform: translateX(0%);
+    top: 0;
+  }
+}
+.show-mobile {
+  display: block;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+nav {
+  background-color: black;
+
+  .container {
+    .mobile-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      list-style-type: none;
+
+      .logo {
+        img {
+          width: 150px;
+        }
+      }
+
+      .hamburger {
+        color: white;
+      }
+    }
+  }
+}
+.home {
+  .main {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+
+    .video-container {
+      width: 100%;
+      height: 100%;
+
+      video {
+        height: 100%;
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+
+      .content-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        .logo {
+          img {
+            width: 150px;
+          }
+        }
+
+        h1 {
+          font-family: "Bebas Neue", cursive;
+          text-align: center;
+        }
+
+        .box-container {
+          background-color: black;
+          font-size: 14px;
+          text-align: center;
+        }
+
+        .buttons {
+          display: grid;
+          grid-gap: 0.5rem;
+          justify-items: center;
+        }
+      }
+    }
+  }
+}
+
+.news-shop {
+  .container {
+    .latest-news {
+      .title-viewmore {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          font-size: 24px;
+          font-weight: 400;
+        }
+
+        .view {
+          display: flex;
+          flex-direction: row;
+          font-size: 12px;
+          text-decoration: none;
+          color: black;
+          font-weight: 600;
+          text-transform: uppercase;
+
+          div {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      .box-container {
+        .row {
+          .news-card {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            position: relative;
+            background-image: url(https://www.itl.cat/pngfile/big/174-1748665_rf-online-wallpapers.jpg);
+
+            .news-info > * {
+              z-index: 10;
+              position: relative;
+            }
+
+            .news-info {
+              color: white;
+              text-align: center;
+
+              .title {
+                font-family: "Bebas Neue", cursive;
+                font-size: 2rem;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+
+          .news-card:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: black;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    .cash-shop {
+      .title-viewmore {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          font-size: 24px;
+          font-weight: 400;
+        }
+
+        .view {
+          display: flex;
+          flex-direction: row;
+          font-size: 12px;
+          text-decoration: none;
+          color: black;
+          font-weight: 600;
+          text-transform: uppercase;
+
+          div {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .shop-item-container {
+        display: grid;
+        grid-gap: 1rem;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: black;
+  .container {
+    div {
+      color: white;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .home {
+    .main {
+      height: inherit;
+      .video-container {
+        video {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hide-mobile {
+    display: block;
+  }
+  .show-mobile {
+    display: none !important;
+  }
+  .show-desktop {
+    display: block;
+  }
+  .hide-desktop {
+    display: none !important;
+  }
+  nav {
+    background-color: black;
+    .container {
+      .desktop-nav {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          list-style-type: none;
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+        .logo {
+          img {
+            width: 150px;
+          }
+        }
+        .nav-list {
+          display: flex;
+          .list {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+          .list + .list {
+            margin-left: 1rem;
+          }
+        }
+        .login {
+          display: flex;
+          align-items: center;
+          .sign {
+            display: flex;
+            a {
+              text-decoration: none;
+              color: white;
+              font-size: 14px;
+              font-weight: 600;
+              text-transform: uppercase;
+            }
+            .line {
+              margin-left: 0.5rem;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home {
+    .main {
+      .content {
+        .content-container {
+          h1 {
+            font-size: 60px;
+          }
+          .buttons {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .news-shop {
+    .news-shop-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      .latest-news {
+        border-right: 1px solid #c3beb2;
+        .box-container {
+          .row {
+            .news-card {
+              .news-info {
+                text-align: inherit;
+                .title {
+                  font-size: 36px;
+                }
+                .desc {
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                }
+              }
+            }
+          }
+          .first {
+            .news-card {
+              height: 305px;
+              display: flex;
+              align-items: flex-end;
+            }
+          }
+          .second {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            .news-card {
+              height: 300px;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+      .cash-shop {
+        .shop-item-container {
+          grid-gap: 2rem;
+        }
+      }
+    }
+  }
 }

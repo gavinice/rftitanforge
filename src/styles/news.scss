@@ -1,0 +1,85 @@
+.news {
+  .news-main {
+    .container {
+      .news-container {
+        display: grid;
+        grid-gap: 1rem;
+        .news-card {
+          background-image: url(https://www.itl.cat/pngfile/big/174-1748665_rf-online-wallpapers.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: relative;
+          .news-info > * {
+            z-index: 10;
+            position: relative;
+          }
+          .news-info {
+            color: white;
+            text-align: center;
+            .date {
+              background-color: white;
+              max-width: 100px;
+              height: 25px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: black;
+              font-size: 14px;
+              font-weight: 600;
+              text-transform: uppercase;
+              font-family: "bebas neue", cursive;
+            }
+            .title {
+              font-size: 2rem;
+              font-family: "bebas neue", cursive;
+            }
+          }
+        }
+        .news-card:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .news {
+    .news-main {
+      .container {
+        .news-container {
+          grid-template-columns: 1fr 1fr;
+          .news-card {
+            .news-info {
+              text-align: inherit;
+              .date {
+                margin: inherit;
+              }
+              .desc {
+                font-size: 14px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+              }
+              .title {
+                font-size: 36px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                max-width: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

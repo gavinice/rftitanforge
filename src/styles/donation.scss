@@ -1,0 +1,63 @@
+.donation {
+  .header {
+    .container {
+      .header-content-container {
+        .box-container {
+          display: grid;
+          grid-gap: 1rem;
+          .box {
+            background-color: lightgray;
+            text-align: center;
+            color: white;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .title {
+              font-size: 18px;
+            }
+            a {
+              text-decoration: none;
+            }
+            .donate-logo {
+              img {
+                max-width: 150px;
+              }
+            }
+          }
+          .paypal {
+            background-color: #0096d8;
+            a {
+              .donate-btn {
+                color: #0096d8;
+              }
+            }
+          }
+          .gcash {
+            background-color: #007dfe;
+          }
+          .paymaya {
+            background-color: #335d71;
+          }
+          .bdo {
+            background-color: #142870;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .donation {
+    .header {
+      .container {
+        .header-content-container {
+          .box-container {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .header {
+    background-image: url(/public/download-bg.png);
+    background-position: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .container {
+      .header-content-container {
+        text-align: center;
+      }
+    }
+  }
+}

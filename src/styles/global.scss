@@ -1,0 +1,112 @@
+.btn {
+  border: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shop-item {
+  display: flex;
+  .item-img {
+    width: 70px;
+    height: 70px;
+    background-image: url(/public/shop-img.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .item-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .tag {
+      background-color: #f5821f;
+      color: white;
+      text-align: center;
+      max-width: 60px;
+      font-size: 11px;
+      text-transform: uppercase;
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem;
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .price {
+      font-size: 14px;
+      color: #f5821f;
+      font-weight: 600;
+    }
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: #f5821f;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.header {
+  background-image: url(/public/header-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .container {
+    .header-content-container > * {
+      z-index: 10;
+      position: relative;
+    }
+    .header-content-container {
+      .logo {
+        text-align: center;
+        img {
+          width: 150px;
+        }
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-family: "Bebas Neue", cursive;
+      }
+    }
+  }
+}
+.header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    .container {
+      .header-content-container {
+        .logo {
+          img {
+            width: 200px;
+          }
+        }
+        h1 {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
